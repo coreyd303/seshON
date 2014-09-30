@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SeshON</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render partial: "layouts/navigation" %>
-  <%= yield %>
-</body>
+  <head>
+    <title>SeshON</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Sintony' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="em-f body_back_color" data-spy="scroll" data-target="#side-nav">
+    <%= render partial: "layouts/navigation" %>
+      <div class="em-push"></div>
+      <div class="alert-background text-center">
+        <% flash.each do |type, message| %>
+          <div class="alert alert-<%= type %>">
+            <%= message %>
+          </div>
+        <% end %>
+      </div>
+      <%= yield %>
+  </body>
+
 </html>
