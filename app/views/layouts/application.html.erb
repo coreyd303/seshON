@@ -5,9 +5,47 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&effect=3d' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <%= render partial: "layouts/navigation" %>
-  <%= yield %>
+
+<div class="site-wrapper">
+
+  <div class="site-wrapper-inner">
+
+    <div class="cover-container">
+
+      <div class="masthead clearfix">
+
+        <div class="inner">
+          <%= link_to "Seshon", home_path, class: "masthead-brand font-effect-3d" %>
+          <ul class="nav masthead-nav">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+    <%= yield %>
+  </div>
+
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/docs.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
