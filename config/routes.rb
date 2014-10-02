@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
 root to: "static_pages#index"
 
   match "/home",    to: "static_pages#index",    via: "get"

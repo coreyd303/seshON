@@ -20,10 +20,18 @@
 
           <div class="inner">
             <%= link_to "Seshon", home_path, class: "masthead-brand font-effect-3d" %>
-            <ul class="nav masthead-nav">
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Login</a></li>
-            </ul>
+            <% if user_signed_in? %>
+              <ul class="nav masthead-nav">
+                <li>What's up <strong><%= current_user.username %></strong></li>
+                <li><%= link_to "Dashboard", home_path %></li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+              </ul>
+            <% else %>
+              <ul class="nav masthead-nav">
+                  <li><%= link_to "Sign up", new_user_registration_path %></li>
+                  <li><%= link_to "Login", new_user_session_path %></li>
+              </ul>
+            <% end %>
           </div>
 
           <div class="mastfoot">
