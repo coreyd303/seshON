@@ -20,7 +20,9 @@ gem 'haml', '~> 4.0.5'
 gem 'haml-rails'
 # gem 'aasm'
 # gem 'mini_magick', '~> 3.8.0'
-gem "devise"
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 # gem 'carrierwave', '~> 0.9'
 
 group :production do

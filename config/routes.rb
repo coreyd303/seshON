@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-root to: "static_pages#index"
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
+  
+  root to: "static_pages#index"
 
   match "/home",    to: "static_pages#index",    via: "get"
 
+  resources :skate_parks
 
 
   # The priority is based upon order of creation: first created -> highest priority.
