@@ -11,11 +11,11 @@ class User < ActiveRecord::Base
       )
   end
 
-  def self.create_with_auth
+  def self.create_with_auth(auth)
     User.new do |user|
       user.name        = auth.info.name
       user.email       = auth.info.email
-      user.oauth_token = auth.creadentials.oauth_token
+      user.oauth_token = auth.credentials.oauth_token
       user.provider    = auth.provider
       user.uid         = auth.uid
       user.save!
