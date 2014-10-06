@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&effect=3d' rel='stylesheet' type='text/css'>
   
-  <style>html, body, #map_canvas { margin: 0; padding: 0; height: 100%; }</style>
+  <style>html, body, #map_canvas {  }</style>
   <script src="https://maps.googleapis.com/maps/api/js?libraries=visualization">
   </script>
 
@@ -16,8 +16,8 @@
 
     function initialize() {
       var mapOptions = {
-        zoom: 2,
-        center: new google.maps.LatLng(2.8,-187.3),
+        zoom: 12,
+        center: new google.maps.LatLng(39.7392, -104.9847),
         mapTypeId: google.maps.MapTypeId.TERRAIN
       };
       map = new google.maps.Map(document.getElementById('map_canvas'),
@@ -26,8 +26,8 @@
       // Create a <script> tag and set the USGS URL as the source.
       var script = document.createElement('script');
       // (In this example we use a locally stored copy instead.)
-      // script.src = 'http://earthquake.usgs.gov/earthquakes/feed/geojsonp/2.5/week';
-      script.src = 'earthquake_GeoJSONP';
+      // script.src = 'http://data.denvergov.org/download/gis/skate_parks/csv/skate_parks.csv';
+      script.src = 'assets/geoJSON/denver_parks.geojson'
       document.getElementsByTagName('head')[0].appendChild(script);
     }
 
@@ -59,13 +59,10 @@
         <div class="masthead clearfix">
 
           <div class="inner">
-            <%= link_to "Seshon", home_path, class: "masthead-brand font-effect-3d" %>
-            <ul class="nav masthead-nav">
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Login</a></li>
-            </ul>
+          <%= render partial: "layouts/navigation" %>
+            
+            
           </div>
-          <p><%= current_user.name %></p>
           <div class="mastfoot">
             <div class="inner">
               <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
