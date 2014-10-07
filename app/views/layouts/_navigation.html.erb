@@ -4,9 +4,12 @@
 
     <div class="col-md-8" style="margin-top:5px">
       <%= link_to "Seshon", home_path, class: "masthead-brand font-effect-3d" %>
+      <% if current_user != nil %>
       <%= link_to current_user.name, root_path, {class: "em-top-links em-f em-padding",
          style: "color:white"}%>
+      <% else %>
       <%= link_to "Sign In with Facebook", 'auth/facebook', {class: "em-top-links em-f col-md-offset-2", style: "color:white"}%>
+      <% end %>
     </div>
   </div>
 </div>

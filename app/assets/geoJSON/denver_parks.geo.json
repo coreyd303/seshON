@@ -1,0 +1,43 @@
+{ "type": "FeatureCollection",
+    "features": [
+    {
+      "type": "Feature",
+      "properties": {
+          "name": "Denver Skatepark",
+          "amenity": "Skatepark",
+          "popupContent": "Denver Skatepark"
+      },
+      "geometry": {
+          "type": "Point",
+          "coordinates": [39.758886,-105.002668]
+      }
+    },
+
+    {
+    "type": "Feature",
+    "properties": {
+        "name": "Pioneer Skatepark",
+        "amenity": "Skatepark",
+        "popupContent": "Pioneer Skatepark"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [39.805602,-104.922159]
+      }
+    },
+
+    {
+    "type": "Feature",
+    "properties": {
+        "name": "William McKinley Carson Park",
+        "amenity": "Skatepark",
+        "popupContent": "William McKinley Carson Park"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [39.610929,-104.904006]
+    }
+  }
+ ]
+}
+
