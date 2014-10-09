@@ -20,9 +20,11 @@ gem 'haml', '~> 4.0.5'
 gem 'haml-rails'
 gem 'omniauth-facebook'
 gem 'figaro'
+gem 'gmaps4rails'
+
 # gem 'aasm'
 # gem 'mini_magick', '~> 3.8.0'
-# gem "devise", '~> 3.3.0'
+
 # gem 'carrierwave', '~> 0.9'
 
 group :production do
@@ -54,14 +56,3 @@ end
 group :development do    #access at rails/routes
   gem 'spring', '~> 1.1.3'
 end
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]

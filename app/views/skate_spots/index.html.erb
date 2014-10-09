@@ -1,0 +1,21 @@
+<%= link_to "Create New Skate Spot", new_skate_spot_path, class: "btn btn-primary" %>
+<br/>
+<br/>
+
+<div class="container">
+  <div class="row">
+    <% @skate_spots.each do |spot| %>
+    <div class="col-lg-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h4 class="caption-link"><%= link_to spot.name, skate_spot_path(spot) %></h4>
+          <p><%= spot.address %></p>
+          <p><%= spot.city %></p>
+          <p><%= spot.zipcode %></p>
+          <p><%= link_to "Delete", skate_spot_path(spot), method: :delete, class:"btn btn-warning btn-sm" %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

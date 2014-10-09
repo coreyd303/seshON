@@ -1,16 +1,54 @@
-<div class="em-top-navbar">
-  <div class="container em-element">
-    
-
-    <div class="col-md-8" style="margin-top:5px">
-      <%= link_to "Seshon", home_path, class: "masthead-brand font-effect-3d" %>
-      <% if current_user != nil %>
-      <%= link_to current_user.name, root_path, {class: "em-top-links em-f em-padding",
-         style: "color:white"}%>
-      <% else %>
-      <%= link_to "Sign In with Facebook", 'auth/facebook', {class: "em-top-links em-f col-md-offset-2", style: "color:white"}%>
-      <% end %>
+<div class="navbar navbar-default navbar-fixed-top z-index:10;" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <p><%= link_to "Seshon", home_path, class: "masthead-brand navbar-brand font-effect-3d" %></p>
     </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>&nbsp</li>
+        <li>
+          <%= link_to "Find Skate Spots", skate_maps_path %>
+        </li>
+        <li>
+          <% if current_user %>
+            <%= link_to "Submit New Skate Spot", home_path %>
+          <% end %>
+        </li>
+        <li>
+          <% if current_user %>
+            <%= link_to "Current Feature Seshon", home_path %>
+          <% end %>
+        </li>
+      </ul>
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <% if current_user %>
+            <%= link_to "Welcome '#{current_user.name}'", root_path %>
+          <% else %>
+            <%= link_to "Sign In with Facebook", 'auth/facebook' %>
+          <% end %>
+        </li>
+        <li>
+          <% if current_user %>
+            <%= link_to "Sign Out", signout_path %>
+          <% end %>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
   </div>
 </div>
+
+
+
+
+
+
 

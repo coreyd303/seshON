@@ -1,0 +1,100 @@
+<div class="form-container">
+  <div style="padding-top:1px;">
+    <h3>Complete the form below to submit the details of a new skate spot location</h3>
+    <%= form_for @skate_spot, html: {class: "form-horizontal", role: "form", } do |f| %>
+      <div class="form-group">
+        <div class="col-md-4 col-md-offset-4">
+          <%= f.label :name, :class => 'control-label'%>
+          <%= f.text_field :name, :class => 'form-control' %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-md-offset-4">
+          <%= f.label :address, :class => 'control-label'%>      
+          <%= f.text_field :address, :class => 'form-control' %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-3 col-md-offset-4">
+          <%= f.label :city, :class => 'control-label'%>
+          <%= f.text_field :city, :class => 'form-control' %>
+        </div>
+        <div class="col-md-1">
+          <%= f.label :state, :class => 'control-label'%>
+          <%= f.select(:state, options_for_select(us_states, "CO")) %>
+        </div>
+      </div>
+
+      <div class="form-group" >
+        <div class="col-md-4 col-md-offset-4">
+          <%= f.label :zipcode, :class => 'control-label'%>
+          <%= f.text_field :zipcode, :class => 'form-control' %>
+        </div>
+      </div>
+
+      <div class="form-group" >
+        <div class="col-md-2 col-md-offset-4">
+          <%= f.label :latitude, :class => 'control-label'%>
+          <%= f.text_field :latitude, :class => 'form-control', :id => "lat-field" %>
+        </div>
+
+        <div class="col-md-2">
+          <%= f.label :longitude, :class => 'control-label'%>
+          <%= f.text_field :longitude, :class => 'form-control', :id => "long-field" %>
+        </div>
+      </div>
+      <div class="form-group" style="padding-bottom:15px;">
+        <div class="col-md-4 col-md-offset-4">
+            <%= f.submit "Submit", :class => "btn btn-success btn-lg", style:"border-style:solid; border-width:2px; border-color:white;" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<p id="demo">Click the button to get your coordinates:</p>
+
+<button onclick="getLocation()">Use My Current Location</button>
+
+<script>
+  $(document).ready(function(){
+
+    getLocation();
+  })
+
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(assignPosition);
+    } else {
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+
+  function assignPosition(position) {
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    displayCoordinatesInFields(latitude, longitude);
+  }
+
+  function displayCoordinatesInFields(latitude, longitude) {
+    $("#lat-field").val(latitude);
+    $("#long-field").val(longitude);
+  }
+
+  // var x = document.getElementById("demo");
+
+  // function getLocation() {
+  //     if (navigator.geolocation) {
+  //         navigator.geolocation.getCurrentPosition(showPosition);
+  //     } else { 
+  //         x.innerHTML = "Geolocation is not supported by this browser.";
+  //     }
+  // }
+
+  // function showPosition(position) {
+  //     x.innerHTML="Latitude: " + position.coords.latitude + 
+  //     "<br>Longitude: " + position.coords.longitude;  
+  // }
+</script>

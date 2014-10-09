@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   def self.from_omniauth(auth)
     user = find_with_auth(auth)
     create_with_auth(auth) unless user
+    user
   end
 
   def self.find_with_auth(auth)

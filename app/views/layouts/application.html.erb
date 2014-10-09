@@ -8,77 +8,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&effect=3d' rel='stylesheet' type='text/css'>
-
-  <style>
-      html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
-    </style>
-
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
-<script>    
-var map;
-
-google.maps.event.addDomListener(window, 'load', function() {
-  map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: { lat: 39.7392, lng: -104.9847 },
-    zoom: 12
-  });
-
-  // Get the earthquake data (JSONP format)
-  // This feed is a copy from the USGS feed, you can find the originals here:
-  //   http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
-  var script = document.createElement('script');
-  script.setAttribute('GET',
-    'http://localhost:3000/denver_parks.geo.json', true);
-  document.getElementsByTagName('head')[0].appendChild(script);
-});
-
-// Defines the callback function referenced in the jsonp file.
-function eqfeed_callback(data) {
-  map.data.addGeoJson(data);
-}
-</script>
-
-
-<!-- 
-    <script>
-function initialize() {
-  var myLatlng = new google.maps.LatLng(39.73,-104.87);
-  var mapOptions = {
-    zoom: 10,
-    center: myLatlng
-  };
-
-  var markers = [
-      ['Arvada Skate Park', 39.8265378,-105.1435858],
-      ['Aurora Wheel Skate Park', 39.675352,-104.803648],
-      ['Scott Carpenter Skate Park', 40.0126159,-105.2549881],
-      ['Brighton Skate Complex', 39.978764,-104.759102],
-      ['Maroubra Beach', -33.950198, 151.259302]
-    ];
-
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions );
-
-  google.maps.event.addListener(kmlLayer, 'click', function(kmlEvent) {
-    var text = kmlEvent.featureData.description;
-    showInContentWindow(text);
-  });
-
-  function showInContentWindow(text) {
-    var sidediv = document.getElementById('content-window');
-    sidediv.innerHTML = text;
-  }
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>
- -->
 </head>
 
 <body>
@@ -97,10 +26,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             
           </div>
           <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          </div>
-
+            <div class="inner"></div>
         </div>
     
       </div>
