@@ -8,7 +8,7 @@ class CreateSkateSpots < ActiveRecord::Migration
       t.string   :zipcode
       t.float    :latitude
       t.float    :longitude
-      t.string   :image_url
+      t.string   :image
       t.timestamps
     end
   end

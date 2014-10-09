@@ -2,7 +2,7 @@ class SkateSpotsController < ApplicationController
   respond_to :html, :json
 
   def index
-    @skate_spots = SkateSpot.all
+    @spots = SkateSpot.all
   end
 
   def show
@@ -15,18 +15,18 @@ class SkateSpotsController < ApplicationController
   end
 
   def new
-    @skate_spot = SkateSpot.new
+    @spot = SkateSpot.new
   end
 
   def create
-    @skate_spot = SkateSpot.new(spot_params)
-    @skate_spot.save 
+    @spot = SkateSpot.new(spot_params)
+    @spot.save 
     redirect_to skate_spots_path
   end
 
   def destroy
-    @skate_spot = SkateSpot.find(params[:id])
-    @skate_spot.destroy 
+    @spot = SkateSpot.find(params[:id])
+    @spot.destroy 
     redirect_to skate_spots_path
   end
 
@@ -36,6 +36,11 @@ class SkateSpotsController < ApplicationController
     params.require(:skate_spot).permit(:name,
                                        :address,
                                        :city,
-                                       :zipcode)
+                                       :state,
+                                       :zipcode,
+                                       :latitude,
+                                       :longitude,
+                                       :image,
+                                       :remote_image_url)
   end
 end

@@ -7,7 +7,7 @@
         <img class="img-circle" src="http://i907.photobucket.com/albums/ac277/lord_Revelation911/skate.jpg" alt="Generic placeholder image" style="width: 170px; height: 170px; border-style: solid; border-width: 2px;">
         <br/>
         <br/>
-        <%= link_to "Submit a New Skate Spot", home_path, class: "btn btn-success btn-lrg" %>
+        <%= link_to "Submit a SeshON Spot", new_user_skate_spot_path, class: "btn btn-success btn-lrg" %>
       </li>
       <br/>
       <li>
@@ -30,7 +30,7 @@
       <div class="thumbnail">
         <div class="caption">
           <h4 class="caption-link"><%= link_to spot.name, skate_spot_path(spot) %></h4>
-          <p><%= image_tag(spot.image_url, height: '100', width: '100', style: 'border-style:solid; border-width:2px; border-radius:5px; border-color:white;') %></p>
+          <p><%= image_tag(spot.image, height: '100', width: '100', style: 'border-style:solid; border-width:2px; border-radius:5px; border-color:white;') %></p>
           <p style="color:white;"><%= spot.address %></p>
           <p style="color:white;"><%= spot.city %>, <%= spot.zipcode %></p>
           <p><%= link_to "Delete", skate_spot_path(spot), method: :delete, class:"btn btn-warning btn-sm" %></p>

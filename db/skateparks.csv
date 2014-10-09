@@ -1,4 +1,4 @@
-id,name,address,city,state,zipcode,latitude,longitute,image_url
+id,name,address,city,state,zipcode,latitude,longitute,image
 1,Denver Skate Park,1820 Little Raven St,Denver,CO,80202,39.758886,-105.002668,http://v2.joyengine.com/wp-content/uploads/2010/04/DenSP.jpg
 2,Aurora Wheel Skate Park,2500 S. Wheel Park Circle,Aurora,CO,80013,39.675352,-104.803648,http://www.sitedesigngroup.com/img/uploaded/2657_orig.jpg
 3,Lakewood Skate Park,930 S. Youngfield Ct.,Lakewood,CO,80228,39.70053,-105.140002,http://www.lakewood.org/uploadedImages/Images/Community_Resources/Parks_Forestry_Open_Space/A-Z_Parks/Lakewood_Skate_Park.jpg?n=3657

@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+  has_many :skate_spots
+
   def self.from_omniauth(auth)
     user = find_with_auth(auth)
     create_with_auth(auth) unless user

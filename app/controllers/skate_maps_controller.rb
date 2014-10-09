@@ -1,4 +1,5 @@
 class SkateMapsController < ApplicationController
+
   def index
     @spots = SkateSpot.all
 

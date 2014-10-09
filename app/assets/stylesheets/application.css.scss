@@ -245,13 +245,30 @@ body {
   border-radius: 15px;
 }
 
-
+#map-user {
+  width: 1000px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 25px;
+}
 /* skate map buttons */
 
 .skate-map-btn {
   float: right;
   margin-right: 120px;
   margin-top: 125px
+}
+
+.user-map-btn {
+  margin-top: 10px;
+}
+
+.info-window a {
+  color:black;
 }
 
 .thumbnail {
@@ -293,6 +310,27 @@ body {
 }
 
 .form-container {
+  padding-bottom: 20px;
+  margin-top: 10px;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,1);
+          box-shadow: inset 0 0 100px rgba(0,0,0,1);
+}
+
+.form-header {
+  font-family:  'Permanent Marker';
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 5px;
+  margin-left: 120px;
+  margin-right: 120px;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,1);
+          box-shadow: inset 0 0 100px rgba(0,0,0,1);
+}
+
+.form-zipper {
+  margin-top: 10px;
+  margin-right: 200px;
+  margin-left: 200px;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,1);
           box-shadow: inset 0 0 100px rgba(0,0,0,1);
 }

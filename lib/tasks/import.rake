@@ -14,7 +14,7 @@ task :import => [:environment] do
       :zipcode   => row[5],
       :latitude  => row[6],
       :longitude => row[7],
-      :image_url => row[8]
+      :image     => row[8]
     })
   end
 end
