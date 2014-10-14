@@ -40,7 +40,6 @@ class SkateSpotsController < ApplicationController
                                        :zipcode,
                                        :latitude,
                                        :longitude,
-                                       :image,
-                                       :remote_image_url)
+                                       :image)
   end
 end

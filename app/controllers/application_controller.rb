@@ -19,6 +19,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def admin?
+    current_user.role == admin ? true : false
+  end
+
   helper_method :current_user,
                 :logged_in?,
                 :require_login

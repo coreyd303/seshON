@@ -10,6 +10,7 @@ class CreateUserSkateSpots < ActiveRecord::Migration
       t.float   :latitude
       t.float   :longitude
       t.string  :image
+      t.boolean :approval, default: false
     end
   end
 end

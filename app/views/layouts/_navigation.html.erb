@@ -41,6 +41,11 @@
             <%= link_to "Sign Out", signout_path %>
           <% end %>
         </li>
+        <li>
+          <% if current_user && current_user.role == "admin" %>
+            <%= link_to "Admin Dashboard", administrator_admins_path %>
+          <% end %>
+        </li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

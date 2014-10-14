@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :uid
       t.string :email
       t.string :oauth_token
+      t.string :role, default: "default"
       t.timestamps
     end
   end

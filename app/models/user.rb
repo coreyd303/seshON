@@ -23,6 +23,12 @@ class User < ActiveRecord::Base
       user.provider    = auth.provider
       user.uid         = auth.uid
       user.save!
+      # 1. Setup the User Mailer
+      # 2. Setup Resque or Sidekiq 
+        # Resque.enqueue(UserMailer.send_sign_up_notification(user).deliver)
+        # -> loads into Redis
+        # some_method.enqueue
+      # --> UserMailer.send_sign_up_notification(user).deliver
     end
   end
 end

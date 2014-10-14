@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20141009194824) do
     t.float   "latitude"
     t.float   "longitude"
     t.string  "image"
+    t.boolean "approval",  default: false
   end
 
   create_table "users", force: true do |t|
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 20141009194824) do
     t.string   "uid"
     t.string   "email"
     t.string   "oauth_token"
+    t.string   "role",        default: "default"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

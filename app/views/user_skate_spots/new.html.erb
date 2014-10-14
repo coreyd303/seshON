@@ -45,6 +45,13 @@
           </div>
         </div>
 
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3">
+            <%= f.label :approval %><br/>
+            <%= f.select(:approval, options_for_select([['Approve', 1],['Reject', 2]], 1 ))%>
+          </div>
+        </div>
+
         <div class="form-group" >
           <div class="col-md-3 col-md-offset-3">
             <%= f.label :latitude, :class => 'control-label'%>
