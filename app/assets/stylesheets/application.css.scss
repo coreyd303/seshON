@@ -255,7 +255,7 @@ body {
   height: 500px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5px;
+  margin-top: 100px;
   border-style: solid;
   border-width: 5px;
   border-radius: 25px;
@@ -276,7 +276,7 @@ body {
 .skate-map-btn {
   float: right;
   margin-right: 120px;
-  margin-top: 125px
+  margin-top: 225px
 }
 
 .user-map-btn {
@@ -384,4 +384,9 @@ body {
   font-size: 30px;
   font-weight: bold;
   color: #FF9900;
+}
+
+.static-pg {
+  margin-left: auto;
+  margin-right: auto;
 }

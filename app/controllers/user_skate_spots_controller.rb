@@ -1,13 +1,13 @@
 class UserSkateSpotsController < ApplicationController
 
   def index
-    user_spots = UserSkateSpot.approved
-    user_spots_to_hash(user_spots)
+    @user_spots = UserSkateSpot.approved
+    user_spots_to_hash(@user_spots)
   end
 
   def show
-    user_spot = UserSkateSpot.find(params[:id])
-    user_spot_to_hash(user_spot)
+    @user_spot = UserSkateSpot.find(params[:id])
+    user_spot_to_hash(@user_spot)
   end
 
   def new
@@ -30,7 +30,7 @@ class UserSkateSpotsController < ApplicationController
   end
 
   def user_spot_to_hash(user_spot)
-    @hash  = Gmaps4rails.build_markers(@spot) do |spot, marker|
+    @hash  = Gmaps4rails.build_markers(user_spot) do |spot, marker|
       marker.lat spot.latitude
       marker.lng spot.longitude
     end

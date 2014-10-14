@@ -1,41 +1,30 @@
 <div class="container marketing">
 
-  <div class="row" style="float:center;">
-
-
+  <div class="row" >
     <% if current_user %>
       <div class="col-lg-2"></div>
-      <div class="col-lg-3">
-        <img class="img-circle" src="http://www.phlmetropolis.com/Skateboardersandtheirboa.jpg" alt="Generic placeholder image" style="width: 225px; height: 225px; border-style: solid; border-width: 3px;">
+      <div class="col-lg-4">
+        <img class="img-circle" src="http://www.phlmetropolis.com/Skateboardersandtheirboa.jpg" alt="Generic placeholder image" style="width: 325px; height: 325px; border-style: solid; border-width: 3px;">
         <br/>
         <br/>
-        <%= link_to "Submit Spot", new_user_skate_spot_path, class: "btn btn-info btn-md", style:"border-style:solid; border-width:2px; border-color:white;"%>
+        <%= link_to "Submit Skate Spot", new_user_skate_spot_path, class: "btn btn-info btn-md"%>
       </div><!-- /.col-lg-4 -->
-
-      <div class="col-lg-3">
-        <img class="img-circle" src="http://ludicaskate.com/noticias/entrevistas/20130326/COCO6.jpg" alt="Generic placeholder image" style="width: 225px; height: 225px; border-style: solid; border-width: 3px;">
-        <br/>
-        <br/>
-        <%= link_to "Current SeshON", home_path, class: "btn btn-info btn-md", style:"border-style:solid; border-width:2px; border-color:white;" %>
-      </div><!-- /.col-lg-4 -->
-
     <% else %>
-      <div class="col-lg-3"></div>
-      <div class="col-lg-3">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-4">
         <img class="img-circle" src="http://www.kezi.com/wp-content/uploads/2013/11/SKATEBOARD.jpg" alt="Generic placeholder image" style="width: 225px; height: 225px; border-style: solid; border-width: 3px;">
         <br/>
         <br/>
-        <%= link_to "Sign In With Facebook", 'auth/facebook', class: "btn btn-info btn-md", style:"border-style:solid; border-width:2px; border-color:white;"%>
+        <%= link_to "Sign In With Facebook", 'auth/facebook', class: "btn btn-info btn-md"%>
       </div><!-- /.col-lg-4 -->
     <% end %>
 
-    <div class="col-lg-3">
-      <img class="img-circle" src="http://skatingtricks.org/wp-content/uploads/2012/01/beginner-skateboard-tricks.jpg" alt="Generic placeholder image" style="width: 225px; height: 225px; border-style: solid; border-width: 3px;">
+    <div class="col-lg-4">
+      <img class="img-circle" src="http://skatingtricks.org/wp-content/uploads/2012/01/beginner-skateboard-tricks.jpg" alt="Generic placeholder image" style="width: 325px; height: 325px; border-style: solid; border-width: 3px;">
       <br/>
       <br/>
-      <%= link_to "Skate Spots", skate_maps_path, class: "btn btn-info btn-md", style: "border-style:solid; border-width:2px; border-color:white;" %>
+      <%= link_to "Find Skate Parks", skate_maps_path, class: "btn btn-info btn-md"%>
     </div><!-- /.col-lg-4 -->
-
   </div>
 
 </div>
