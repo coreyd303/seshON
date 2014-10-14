@@ -38,16 +38,16 @@ group :development, :test do
   gem 'sqlite3'
   gem 'capybara'
   gem 'rails_layout'
-  gem 'launchy'
+  # gem 'launchy'
   # gem 'factory_girl_rails', '4.4.1'
   gem 'better_errors'
   gem "binding_of_caller"
   gem "simplecov", :require => false
-  gem "nyan-cat-formatter"
   gem "unicorn"
 end
 
 group :test do
+  gem 'launchy'
   gem 'shoulda-matchers', '~> 2.7.0'
   gem 'database_cleaner', '~> 1.3.0'
 end
