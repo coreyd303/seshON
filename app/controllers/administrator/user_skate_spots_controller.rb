@@ -14,9 +14,9 @@ class Administrator::UserSkateSpotsController < AdminsController
   end
 
   def destroy
-    @user_spot = UserSkateSpot.find(params[:id])
-    @user_spot.destroy
-    redirect_to admininistrator_user_skate_spots_path
+    @spot = UserSkateSpot.find(params[:id])
+    @spot.destroy
+    redirect_to administrator_user_skate_spots_path
   end
 
   def approval

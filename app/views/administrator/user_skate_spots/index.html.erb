@@ -23,7 +23,7 @@
           <td><%= spot.state %></td>
           <td><%= spot.approval %></td>
           <td><%= link_to "Deny", denial_administrator_user_skate_spot_path(spot), method: :post, class: "btn btn-warning btn-lrg" %></td>
-          <td><%= link_to "Delete", administrator_skate_spot_path(spot), method: :delete, class: "btn btn-danger btn-lrg" %></td>
+          <td><%= link_to "Delete", administrator_user_skate_spot_path(spot), method: :delete, class: "btn btn-danger btn-lrg" %></td>
         </tr>
         <% end %>
     </tbody>

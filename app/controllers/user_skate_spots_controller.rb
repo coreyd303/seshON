@@ -1,14 +1,12 @@
 class UserSkateSpotsController < ApplicationController
 
   def index
-    @spots     = UserSkateSpot.approved
-    user_spots = @spots
+    user_spots = UserSkateSpot.approved
     user_spots_to_hash(user_spots)
   end
 
   def show
-    @spot     = UserSkateSpot.find(params[:id])
-    user_spot = @spot
+    user_spot = UserSkateSpot.find(params[:id])
     user_spot_to_hash(user_spot)
   end
 
@@ -19,20 +17,6 @@ class UserSkateSpotsController < ApplicationController
   def create
     @spot = UserSkateSpot.create(spot_params)
     redirect_to user_skate_spots_path
-  end
-
-  private
-
-  def spot_params
-    params.require(:user_skate_spot).permit(:name,
-                                            :address,
-                                            :city,
-                                            :state,
-                                            :zipcode,
-                                            :latitude,
-                                            :longitude,
-                                            :image,
-                                            :approval)
   end
 
   def user_spots_to_hash(user_spots)
@@ -50,5 +34,19 @@ class UserSkateSpotsController < ApplicationController
       marker.lat spot.latitude
       marker.lng spot.longitude
     end
+  end
+
+  private
+
+  def spot_params
+    params.require(:user_skate_spot).permit(:name,
+                                            :address,
+                                            :city,
+                                            :state,
+                                            :zipcode,
+                                            :latitude,
+                                            :longitude,
+                                            :image,
+                                            :approval)
   end
 end
