@@ -9,8 +9,6 @@ root to: "static_pages#index"
   get "/home",                   to: "static_pages#index"
   get "auth/:provider/callback", to: "sessions#create"
   get "auth/failure",            to: redirect('/')
-  get "/admin_signin",           to: "adminsessions#new"
-  get "/admin_signout",          to: "adminsessions#destroy"
   get "/signout",                to: "sessions#destroy"
 
 
