@@ -1,0 +1,26 @@
+<div class="admin-skate-table">
+  <%= link_to "Add New Skate Park", new_administrator_skate_spot_path, class: "btn btn-primary btn-lrg" %>
+  <%= link_to "Manage User Skate Spots", administrator_user_skate_spots_path, class: "btn btn-primary btn-lrg", style: "margin-left:10px;"%>
+  <%= link_to "Manage Current Users", administrator_users_path, class: "btn btn-primary btn-lrg", style: "margin-left:10px;" %>
+  <%= link_to "Dashboard Home", administrator_admins_path, class: "btn btn-primary btn-lrg", style: "margin-left:10px;" %>
+  <table class="table">
+    <thead class="admin-thead">
+      <td>Skate Park</td>
+      <td>City</td>
+      <td>State</td>
+      <td>Update</td>
+      <td>Delete</td>
+    </thead>
+    <tbody>
+      <% @spots.each do |spot| %>
+      <tr>
+        <td><%= link_to spot.name, administrator_skate_spot_path(spot) %></td>
+        <td><%= spot.city %></td>
+        <td><%= spot.state %></td>
+        <td><%= link_to "Edit", edit_administrator_skate_spot_path(spot), class: "btn btn-warning btn-lrg" %></td>
+        <td><%= link_to "Delete", administrator_skate_spot_path(spot), method: :delete, class: "btn btn-danger btn-lrg" %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
