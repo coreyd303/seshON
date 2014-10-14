@@ -1,20 +1,13 @@
 class SkateMapsController < ApplicationController
+  include SkateSpotsHelper
 
   def index
     @spots = SkateSpot.all
-
-    @hash  = Gmaps4rails.build_markers(@spots) do |spot, marker|
-      marker.lat spot.latitude
-      marker.lng spot.longitude
-    end
+    spots_to_hash(@spots)
   end
 
   def show
     @spot = Skatespot.find(params[:id])
-
-    @hash  = Gmaps4rails.build_markers(@spot) do |spot, marker|
-      marker.lat spot.latitude
-      marker.lng spot.longitude
-    end
+    spot_to_hash(@spot)
   end
 end

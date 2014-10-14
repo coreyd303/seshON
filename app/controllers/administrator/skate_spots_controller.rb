@@ -1,13 +1,13 @@
 class Administrator::SkateSpotsController < AdminsController
-
+include SkateSpotsHelper
+  
   def index
     @spots = SkateSpot.all
   end
 
   def show
     @spot      = SkateSpot.find(params[:id])
-    skate_spot = @spot
-    skate_spot_hash(skate_spot)
+    spot_to_hash(@spot)
   end
 
   def new
@@ -46,12 +46,4 @@ class Administrator::SkateSpotsController < AdminsController
                                        :longitude,
                                        :image)
   end
-
-  def skate_spot_hash(skate_spot)
-    @hash  = Gmaps4rails.build_markers(@spot) do |spot, marker|
-      marker.lat spot.latitude
-      marker.lng spot.longitude
-    end
-  end
-
 end
