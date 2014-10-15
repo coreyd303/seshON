@@ -53,7 +53,7 @@ html,
 body {
   
   height: 100%;
-  background: image-url('loanboard.jpg') no-repeat center center fixed;
+  background: asset-url("loanboard.jpg") no-repeat center center fixed;
 }
 body {
   color: #fff;
@@ -228,14 +228,13 @@ body {
 /* skate map */
 
 #map-canvas {
-  width: 800px;
-  height: 550px;
-  margin-left: 80px;
+  width: 1000px;
+  height: 500px;
+  margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 10px;
   border-style: solid;
   border-width: 5px;
-  
   border-radius: 25px;
 }
 
@@ -255,7 +254,7 @@ body {
   height: 500px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 10px;
   border-style: solid;
   border-width: 5px;
   border-radius: 25px;
@@ -264,7 +263,7 @@ body {
 #user-map-show {
   width: 400px;
   height: 230px;
-  margin-left: 80px;
+  margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   border-style: solid;
@@ -274,8 +273,7 @@ body {
 /* skate map buttons */
 
 .skate-map-btn {
-  float: right;
-  margin-right: 120px;
+  margin-right: 0px;
   margin-top: 225px
 }
 
@@ -389,4 +387,14 @@ body {
 .static-pg {
   margin-left: auto;
   margin-right: auto;
+}
+
+.map-header {
+  font-family:  'Permanent Marker';
+  font-size: 50px;
+  margin-top: 65px;
+  margin-left: 250px;
+  margin-right:250px;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,1);
+          box-shadow: inset 0 0 100px rgba(0,0,0,1);
 }

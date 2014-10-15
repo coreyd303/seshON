@@ -7,6 +7,7 @@ module UserSkateSpotsHelper
 
       marker.lat spot.latitude
       marker.lng spot.longitude
+    end
   end
 
   def user_spot_to_hash(user_spot)
