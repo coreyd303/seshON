@@ -14,15 +14,15 @@
 <br/>
 <div class="container">
   <div class="spot-show" style="float:left">
-    <h1><%= @spot.name %></h1>
-    <p><%= image_tag(@spot.image, height: '300', width: '500', style: 'border-style:solid; border-width:3px; border-radius: 15px;') %></p>
+    <h1><%= @user_spot.name %></h1>
+    <p><%= image_tag(@user_spot.image, height: '300', width: '500', style: 'border-style:solid; border-width:3px; border-radius: 15px;') %></p>
   </div>
   
       <div class="row skate-show">
 
         <div class="col-lg-6">
-          <h4><%= @spot.address %></h4>
-          <p><%= @spot.city%>, <%= @spot.state%> <%= @spot.zipcode%></p>
+          <h4><%= @user_spot.address %></h4>
+          <p><%= @user_spot.city%>, <%= @user_spot.state%> <%= @user_spot.zipcode%></p>
           <% if current_user %>
             <div class="fb-share-button" data-href="<%= request.original_url %>" data-layout="button_count" data-width="200"></div>
           <% end %>

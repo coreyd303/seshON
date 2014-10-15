@@ -20,30 +20,22 @@
             <%= link_to "User SeshON Spots", user_skate_spots_path %>
           <% end %>
         </li>
-        <li>
-          <% if current_user %>
-            <%= link_to "Current Feature Seshon", home_path %>
-          <% end %>
-        </li>
       </ul>
 
 
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <% if current_user %>
-            <%= link_to "Welcome '#{current_user.name}'", root_path %>
+          <% if current_user && current_user.role =="admin" %>
+            <%= link_to "Welcome '#{current_user.name}'", administrator_admins_path %>
+          <% elsif current_user && current_user.role == "default" %>
+            <%= link_to "Welcome '#{current_user.name}'" %>
           <% else %>
-            <%= link_to "Sign In with Facebook", 'auth/facebook' %>
+            <%= link_to "Sign In with Facebook", '/auth/facebook' %>
           <% end %>
         </li>
         <li>
           <% if current_user %>
             <%= link_to "Sign Out", signout_path %>
-          <% end %>
-        </li>
-        <li>
-          <% if current_user && current_user.role == "admin" %>
-            <%= link_to "Admin Dashboard", administrator_admins_path %>
           <% end %>
         </li>
       </ul>
