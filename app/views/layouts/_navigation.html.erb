@@ -30,7 +30,7 @@
           <% elsif current_user && current_user.role == "default" %>
             <%= link_to "Welcome '#{current_user.name}'" %>
           <% else %>
-            <%= link_to "Sign In with Facebook", 'auth/facebook' %>
+            <%= link_to "Sign In with Facebook", '/auth/facebook' %>
           <% end %>
         </li>
         <li>
