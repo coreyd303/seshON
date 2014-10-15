@@ -14,14 +14,12 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-# gem "faker"
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'haml', '~> 4.0.5'
 gem 'haml-rails'
 gem 'omniauth-facebook'
 gem 'figaro'
 gem 'gmaps4rails'
-# gem 'aasm'
 gem 'image'
 # gem 'mini_magick', '~> 3.8.0'
 gem 'rmagick', '~>2.13.3', :require=> false
@@ -38,8 +36,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'capybara'
   gem 'rails_layout'
-  # gem 'launchy'
-  # gem 'factory_girl_rails', '4.4.1'
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'better_errors'
   gem "binding_of_caller"
   gem "simplecov", :require => false
