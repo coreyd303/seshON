@@ -13,7 +13,7 @@ describe UserSkateSpot do
 
     expect(spot.approval).to eq(true)
 
-    spot.deny
+    spot.deny(spot)
 
     expect(spot.approval).to eq(false)
   end

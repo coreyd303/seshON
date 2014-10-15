@@ -8,11 +8,11 @@ class UserSkateSpot < ActiveRecord::Base
 
   def approve(spot)
     spot.approval = true
-    spot.save
+    spot.save!
   end
 
   def deny(spot)
     spot.approval = false
-    spot.save
+    spot.save!
   end
 end
