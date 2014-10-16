@@ -6,7 +6,7 @@ include SkateSpotsHelper
   end
 
   def show
-    @spot      = SkateSpot.find(params[:id])
+    @spot = SkateSpot.find(params[:id])
     spot_to_hash(@spot)
   end
 

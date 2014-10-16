@@ -24,6 +24,7 @@ module OmniHelper
       user.oauth_token = mock.credentials.oauth_token
       user.provider    = mock.provider
       user.uid         = mock.uid
+      user.role        = "admin"
       user.save!
     end
   end

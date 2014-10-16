@@ -1,10 +1,9 @@
 class SkateSpotsController < ApplicationController
-  respond_to :html, :json
-
   include SkateSpotsHelper
 
   def index
     @spots = SkateSpot.all
+    spots_to_hash(@spots)
   end
 
   def show

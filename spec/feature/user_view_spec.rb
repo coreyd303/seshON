@@ -28,11 +28,11 @@ describe 'the visitor view', type: :feature do
 
     it 'goes to the find skate parks page' do
       first(:link, 'Find Skate Parks').click
-      expect(current_path).to eq(skate_maps_path)
+      expect(current_path).to eq(skate_spots_path)
     end
 
     it 'sees information about skate parks' do
-      visit skate_maps_path
+      visit skate_spots_path
 
       @spots.each do |spot|
         expect(page).to have_content(spot.id)
@@ -41,7 +41,7 @@ describe 'the visitor view', type: :feature do
 
     it 'can see details on a skate parks' do
       spot = SkateSpot.create(name: "Denver")
-      visit skate_maps_path
+      visit skate_spots_path
 
       click_link("Denver")
       expect(current_path).to eq(skate_spot_path(spot))

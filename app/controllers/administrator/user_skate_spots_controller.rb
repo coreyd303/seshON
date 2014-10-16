@@ -9,10 +9,6 @@ class Administrator::UserSkateSpotsController < AdminsController
     @user_spot = UserSkateSpot.find(params[:id])
   end
 
-  def edit
-    @spot = UserSkateSpot.find(params[:id])
-  end
-
   def destroy
     @spot = UserSkateSpot.find(params[:id])
     @spot.destroy

@@ -44,7 +44,7 @@ include Builders
         user_spot_attributes
 
         expect {
-          post :create, :user_skate_spot => @attributes
+          post :create, user_skate_spot: @attributes
             }.to change(UserSkateSpot, :count).by 1
       end
     end
