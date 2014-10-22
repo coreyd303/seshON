@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 module OmniHelper
-    def mock_auth_hash
+  def mock_auth_hash
     mock = OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
       "provider"    => "facebook",
       "uid"         => "12345",

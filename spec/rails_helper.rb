@@ -28,7 +28,7 @@ require 'build_helpers'
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 # spec_helper.rb
-require 'rubygems'
+# require 'rubygems'
 
 OmniAuth.config.test_mode = true
 # This file is copied to spec/ when you run 'rails generate rspec:install'

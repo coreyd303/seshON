@@ -14,19 +14,20 @@ include OmniHelper
   end
 
   describe "GET index" do
-  #   it 'assigns approved @user_spots' do
-  #     get :index
-  #     expect(assigns(:appoved_spots)).to eq([@approved_spot])
-  #     expect(assigns(:pending_spots)).to eq([@denied_spot])
-  #   end
-
     it 'renders the index template' do
       get :index
       expect(response).to render_template('index')
     end
   end
 
-  describe 'GET destroy' do
+  describe "GET show" do
+    it 'assigns @user_spot' do
+      get :show, id: @approved_spot.id
+      expect(assigns(:user_spot)).to eq(@approved_spot)
+    end
+  end
+
+  describe "GET destroy" do
     it "deletes the user spot" do
       expect{ 
         delete :destroy, id: @denied_spot

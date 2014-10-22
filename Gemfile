@@ -21,7 +21,7 @@ gem 'omniauth-facebook'
 gem 'figaro'
 gem 'gmaps4rails'
 gem 'image'
-# gem 'mini_magick', '~> 3.8.0'
+gem 'mini_magick', '~> 3.8.0'
 gem 'rmagick', '~>2.13.3', :require => false
 gem 'carrierwave', '~> 0.9'
 gem "simplecov", :require => false, :group => :test

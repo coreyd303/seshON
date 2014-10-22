@@ -9,7 +9,7 @@ describe 'the visitor view', type: :feature do
     end
 
     it 'sees the home page' do
-      expect(page).to have_link('Seshon')
+      expect(page).to have_link('SeshON ninja')
       expect(page).to have_link('Sign In with Facebook')
       expect(page).to have_link('Find Skate Parks')
     end
@@ -75,8 +75,8 @@ describe 'the visitor view', type: :feature do
       page.fill_in "user_skate_spot[zipcode]", with: "80333"
 
       page.click_button('Submit')
-
-      expect(page).to have_content("Turing Shred")
+      
+      expect(page).to have_content("Your spot has been submitted, check your email for details on approval")
     end
 
     it 'can see user skate spots' do
@@ -88,6 +88,17 @@ describe 'the visitor view', type: :feature do
 
       page.click_link("Turing Shred")
       expect(current_path).to eq(user_skate_spot_path(user_spot))
+    end
+
+    it 'can logout' do
+      visit ('home')
+      first(:link, 'Sign In with Facebook').click
+
+      expect(page).to have_link('Sign Out')
+
+      click_link('Sign Out')
+
+      expect(page).to have_content("You have been signed out")
     end
   end
 end
